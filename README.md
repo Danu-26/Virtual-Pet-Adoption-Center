@@ -1,3 +1,8 @@
+ 
+ # run frontend using- npm run dev
+ # run backend- node server.js
+ 
+ 
  # Super Admin Credentials
  Email: superadmin@gmail.com
  Password: superadmin1999

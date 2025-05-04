@@ -1,12 +1,34 @@
-# React + Vite
+ 
+ # run frontend using- npm run dev
+ # run backend- node server.js
+ 
+ 
+ # Super Admin Credentials
+ Email: superadmin@gmail.com
+ Password: superadmin1999
+ Created using: scripts/createSuperAdmin.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ # Landing Page & Authentication
 
-Currently, two official plugins are available:
+ The landing page shows the Login form.
+ Any user can register and log in.
+ After login, users can:
+     View all available pet profiles.
+     See the Adopt option (only visible after login).
+ Used JWT Authentication to protect routes.
+ Created an Auth Middleware to check:
+      If the user is logged in.
+      If the user has the correct role (admin/superadmin).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ # Admin Access & Features
+ Only users with the admin role can access the Admin Dashboard.
+ Super Admin can create new admin users
+Admin can
+    Add pet profiles.
+    Update pet profiles.
+    Delete pet profiles.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# State Management: Done using Context API
+# API Integration -frontend
+All pet-related routes are managed inside /services/petService.jsx
+Used a shared axiosInstance to automatically include the token in headers
